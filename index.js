@@ -22,6 +22,9 @@ app.use(
   })
 );
 
+app.get('/me', (req, res) => res.json({me: 'Ray'}))
+
+
 function runServer(port = PORT) {
   const server = app
     .listen(port, () => {
